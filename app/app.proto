@@ -1,0 +1,13 @@
+syntax = "proto3";
+option go_package = "github.com/riteshsonawane/grpc/app";
+
+package app;
+
+message AppRequest{}
+message AppResponse{
+  string message=1;
+}
+
+service AppService{
+  rpc AppInit(AppRequest) returns (AppResponse) {}
+}
